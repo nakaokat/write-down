@@ -22,10 +22,12 @@
                     <div class="col-md-12">
                         <form class="new-note-form" id="new-note">
                             <textarea class="new-note-content" form="new-note" data-bind="value: newNote" placeholder="Please write down anything."></textarea>
-                            <button data-bind="click: addNote" class="btn btn-default">
-                                Save and Make a New Note
-                            </button>
                         </form>
+                        <div class="text-right">
+                            <button data-bind="click: addNote" class="btn btn-primary">
+                            Save and Make a New Note
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -35,7 +37,7 @@
                                 <div data-bind="text:$data">
                                 </div>
                                 <div class="text-right">
-                                    <button data-bind="click:$parent.deleteNote">Delete This Note</button>
+                                    <button data-bind="click:$parent.deleteNote" class="btn btn-default">Delete This Note</button>
                                 </div>
                             </div>
                         </div>

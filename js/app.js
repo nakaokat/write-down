@@ -23,10 +23,17 @@ var ViewModel = function(){
     this.newNote = ko.observable();
 
 
-    this.allNotes = ko.observableArray(['foobar', 'foobar2']);
+    this.allNotes = ko.observableArray([{
+        content: '保存されたノートはここに表示されます。',
+        date: 0
+    }]);
 
     this.addNote = function(){
-        that.allNotes.push(that.newNote());
+        var addDate = Date.now();
+        that.allNotes.push({
+            content: that.newNote(),
+            date: addDate
+        });
     }
 
     that.deleteNote = function(){

@@ -37,8 +37,7 @@ var ViewModel = function(){
     }
 
     that.deleteNote = function(){
-        that.allNotes.remove(this.toString());
-        console.dir(this);
+        that.allNotes.remove(this);
     }
 };
 

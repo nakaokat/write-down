@@ -27,7 +27,11 @@ var ViewModel = function(){
 
     this.addNote = function(){
         that.allNotes.push(that.newNote());
-        console.dir(that.newNote());
+    }
+
+    that.deleteNote = function(){
+        that.allNotes.remove(this.toString());
+        console.dir(this);
     }
 };
 

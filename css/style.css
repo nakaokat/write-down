@@ -1,0 +1,44 @@
+body{
+    color: #333333;
+}
+
+h1, h2, h3, h4{
+    font-weight: 200;
+}
+
+.header{
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.header h1{
+    font-size: 20px;
+}
+
+.new-note-form{
+    max-width: 100%;
+}
+
+.new-note-content{
+    width: 100%;
+    min-height: 400px;
+    border-top: none;
+    border-bottom: solid 1px #DDDDDD;
+    border-left:solid 1px #DDDDDD;
+    border-right:solid 1px #DDDDDD;
+    padding: 2em;
+
+}
+
+.new-note-content:focus{
+    outline:none;
+    border-top: none;
+    border-bottom: solid 1px #DDDDDD;
+    border-left:solid 1px #DDDDDD;
+    border-right:solid 1px #DDDDDD;
+}
+
+.respective-note{
+    padding: 2em;
+    margin-top: 10px;
+    border: 1px solid #DDDDDD;
+}

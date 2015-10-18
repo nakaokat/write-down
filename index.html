@@ -34,7 +34,8 @@
                     <div class="col-md-12" >
                         <div data-bind="foreach: allNotes">
                             <div class="respective-note">
-                                <div data-bind="text:$data">
+                                <div>
+                                    <pre data-bind="text:$data"></pre>
                                 </div>
                                 <div class="text-right">
                                     <button data-bind="click:$parent.deleteNote" class="btn btn-default">Delete This Note</button>

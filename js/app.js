@@ -42,6 +42,7 @@ var ViewModel = function(){
         }
         that.allNotes.push(newNoteObj);
         that.notes.addNote(newNoteObj);
+        that.newNote('');
     }
 
     that.deleteNote = function(){

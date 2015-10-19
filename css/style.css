@@ -12,6 +12,14 @@ h1, h2, h3, h4{
 
 .header h1{
     font-size: 20px;
+    display: inline-block;
+}
+
+.header img{
+    height: 22px;
+    display: inline-block;
+    margin-right: 6px;
+    margin-bottom: 8px;
 }
 
 .new-note-form{

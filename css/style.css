@@ -47,7 +47,7 @@ h1, h2, h3, h4{
 }
 
 .respective-note{
-    padding: 2em;
+    padding: 2em 2em 1em 2em;
     margin-top: 10px;
     border: 1px solid #DDDDDD;
 }

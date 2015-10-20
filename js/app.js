@@ -6,7 +6,7 @@ var Notes = function(){
 
     this.addNote = function(obj){
         var data = JSON.parse(localStorage.writeDownNotes);
-        data.push(obj);
+        data.unshift(obj);
         localStorage.writeDownNotes = JSON.stringify(data);
     };
 
@@ -40,7 +40,7 @@ var ViewModel = function(){
             content: that.newNote(),
             date: Date.now()
         }
-        that.allNotes.push(newNoteObj);
+        that.allNotes.unshift(newNoteObj);
         that.notes.addNote(newNoteObj);
         that.newNote('');
     }

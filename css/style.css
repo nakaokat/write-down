@@ -23,6 +23,22 @@ h1, h2, h3, h4{
     margin-bottom: 8px;
 }
 
+.message-area{
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+    top: 0px;
+    background-color: #dff0d8;
+    color: #3c763d;
+    font-size: 13px;
+    transition: all .4s;
+}
+
+.invisible{
+    visibility: hidden;
+    opacity: 0;
+}
+
 .new-note-form{
     max-width: 100%;
 }

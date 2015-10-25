@@ -50,7 +50,9 @@ var ViewModel = function(){
         function(){
             var tempNote = that.notes.getTempNote();
             var lastSaveNote = that.notes.getAllNotes()[0];
-            if(tempNote.content == lastSaveNote.content){
+            if(!tempNote){
+                return "";
+            }else if(tempNote.content == lastSaveNote.content){
                 return "";
             }else{
                 return tempNote.content

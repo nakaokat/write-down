@@ -36,6 +36,9 @@
                             <textarea class="new-note-content" form="new-note" data-bind="value: newNote, event: {change: saveTempNote}" placeholder="Please write down something."></textarea>
                         </form>
                         <div class="text-right">
+                            <button data-bind="click: saveTempNote" class="btn btn-default">
+                                Save Draft
+                            </button>
                             <button data-bind="click: addNote" class="btn btn-primary">
                             Save and Make a New Note
                             </button>

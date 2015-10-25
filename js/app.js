@@ -60,7 +60,7 @@ var ViewModel = function(){
 
     this.allNotes = ko.observableArray(this.notes.getAllNotes());
 
-    this.saveTempNote = function(){
+    this.saveDraft = function(){
         var tempNoteObj = {
             content: that.newNote()
         };

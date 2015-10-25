@@ -33,7 +33,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <form class="new-note-form" id="new-note">
-                            <textarea class="new-note-content" form="new-note" data-bind="value: newNote" placeholder="Please write down something."></textarea>
+                            <textarea class="new-note-content" form="new-note" data-bind="value: newNote, event: {change: saveTempNote}" placeholder="Please write down something."></textarea>
                         </form>
                         <div class="text-right">
                             <button data-bind="click: addNote" class="btn btn-primary">

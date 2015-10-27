@@ -77,12 +77,25 @@ var ViewModel = function(){
         that.allNotes.unshift(newNoteObj);
         that.notes.addNote(newNoteObj);
         that.newNote('');
+        that.showMessage()
     }
 
     that.deleteNote = function(){
         that.allNotes.remove(this);
         that.notes.removeNote(this);
     }
+
+    that.messageInvisible = ko.observable(true);
+
+    that.showMessage = function(){
+        window.setTimeout(function(){
+            console.log("show message");
+            that.messageInvisible(false);
+        }, 100);
+        window.setTimeout(function(){
+            that.messageInvisible(true);
+        }, 2000);
+    };
 };
 
 ko.applyBindings(new ViewModel());

@@ -25,6 +25,7 @@ h1, h2, h3, h4{
 
 .message-area{
     width: 100%;
+    top:60px;
     z-index: 100;
     position: fixed;
     top: 0px;

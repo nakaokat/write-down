@@ -75,6 +75,7 @@ var ViewModel = function(){
         self.allNotes.unshift(newNoteObj);
         self.notes.addNote(newNoteObj);
         self.newNote('');
+        self.messageText("Saved Sucessfully! Good job!");
         self.showMessage()
     };
 
@@ -84,6 +85,8 @@ var ViewModel = function(){
     };
 
     self.messageVisible = ko.observable(false);
+
+    self.messageText = ko.observable("");
 
     self.showMessage = function(){
         window.setTimeout(function(){

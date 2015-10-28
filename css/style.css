@@ -36,6 +36,7 @@ h1, h2, h3, h4{
 }
 
 .invisible{
+    top:-30px;
     visibility: hidden;
     opacity: 0;
 }

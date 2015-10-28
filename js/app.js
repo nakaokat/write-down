@@ -1,23 +1,22 @@
 var Notes = function(){
-
     if (!localStorage.writeDownNotes){
         localStorage.writeDownNotes = JSON.stringify([]);
-    };
+    }
 
     if (!localStorage.tempNote){
         localStorage.tempNote = JSON.stringify([]);
-    };
+    }
 
     this.setTempNote = function(obj){
         var data = JSON.parse(localStorage.tempNote);
         data[0] = obj;
         localStorage.tempNote = JSON.stringify(data);
-    }
+    };
 
     this.getTempNote = function(){
         var data = JSON.parse(localStorage.tempNote);
         return data[0];
-    }
+    };
 
     this.addNote = function(obj){
         var data = JSON.parse(localStorage.writeDownNotes);
@@ -38,18 +37,17 @@ var Notes = function(){
         }
         localStorage.writeDownNotes = JSON.stringify(data);
     };
-
 };
 
 var ViewModel = function(){
-    var that = this;
+    var self = this;
 
-    this.notes = new Notes();
+    self.notes = new Notes();
 
-    this.newNote = ko.observable(
+    self.newNote = ko.observable(
         function(){
-            var tempNote = that.notes.getTempNote();
-            var lastSaveNote = that.notes.getAllNotes()[0];
+            var tempNote = self.notes.getTempNote();
+            var lastSaveNote = self.notes.getAllNotes()[0];
             if(!tempNote){
                 return "";
             }else if(tempNote.content == lastSaveNote.content){
@@ -60,40 +58,40 @@ var ViewModel = function(){
         }()
     );
 
-    this.allNotes = ko.observableArray(this.notes.getAllNotes());
+    self.allNotes = ko.observableArray(this.notes.getAllNotes());
 
-    this.saveDraft = function(){
+    self.saveDraft = function(){
         var tempNoteObj = {
-            content: that.newNote()
+            content: self.newNote()
         };
-        that.notes.setTempNote(tempNoteObj);
-    }
+        self.notes.setTempNote(tempNoteObj);
+    };
 
-    this.addNote = function(){
+    self.addNote = function(){
         var newNoteObj = {
-            content: that.newNote(),
+            content: self.newNote(),
             date: Date.now()
-        }
-        that.allNotes.unshift(newNoteObj);
-        that.notes.addNote(newNoteObj);
-        that.newNote('');
-        that.showMessage()
-    }
+        };
+        self.allNotes.unshift(newNoteObj);
+        self.notes.addNote(newNoteObj);
+        self.newNote('');
+        self.showMessage()
+    };
 
-    that.deleteNote = function(){
-        that.allNotes.remove(this);
-        that.notes.removeNote(this);
-    }
+    self.deleteNote = function(){
+        self.allNotes.remove(this);
+        self.notes.removeNote(this);
+    };
 
-    that.messageInvisible = ko.observable(true);
+    self.messageInvisible = ko.observable(true);
 
-    that.showMessage = function(){
+    self.showMessage = function(){
         window.setTimeout(function(){
             console.log("show message");
-            that.messageInvisible(false);
+            self.messageInvisible(false);
         }, 100);
         window.setTimeout(function(){
-            that.messageInvisible(true);
+            self.messageInvisible(true);
         }, 2000);
     };
 };

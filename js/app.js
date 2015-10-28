@@ -82,6 +82,8 @@ var ViewModel = function(){
     self.deleteNote = function(){
         self.allNotes.remove(this);
         self.notes.removeNote(this);
+        self.messageText("Deleted the Note.");
+        self.showMessage();
     };
 
     self.messageVisible = ko.observable(false);

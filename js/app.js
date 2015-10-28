@@ -76,6 +76,8 @@ var ViewModel = function(){
         self.notes.addNote(newNoteObj);
         self.newNote('');
         self.messageText("Saved Sucessfully! Good job!");
+        self.messageGreen(true);
+        self.messageYellow(false);
         self.showMessage()
     };
 
@@ -83,12 +85,17 @@ var ViewModel = function(){
         self.allNotes.remove(this);
         self.notes.removeNote(this);
         self.messageText("Deleted the Note.");
+        self.messageGreen(false);
+        self.messageYellow(true);
         self.showMessage();
     };
 
     self.messageVisible = ko.observable(false);
 
     self.messageText = ko.observable("");
+
+    self.messageGreen = ko.observable(true);
+    self.messageYellow = ko.observable(false);
 
     self.showMessage = function(){
         window.setTimeout(function(){

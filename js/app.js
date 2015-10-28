@@ -83,15 +83,15 @@ var ViewModel = function(){
         self.notes.removeNote(this);
     };
 
-    self.messageInvisible = ko.observable(true);
+    self.messageVisible = ko.observable(false);
 
     self.showMessage = function(){
         window.setTimeout(function(){
             console.log("show message");
-            self.messageInvisible(false);
+            self.messageVisible(true);
         }, 100);
         window.setTimeout(function(){
-            self.messageInvisible(true);
+            self.messageVisible(false);
         }, 2000);
     };
 };

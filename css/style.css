@@ -25,20 +25,27 @@ h1, h2, h3, h4{
 
 .message-area{
     width: 100%;
-    top:60px;
     z-index: 100;
     position: fixed;
-    top: 0px;
+    top: -30px;
     background-color: #dff0d8;
     color: #3c763d;
     font-size: 13px;
     transition: all .4s;
+    visibility: hidden;
+    opacity: 0;
 }
 
 .invisible{
     top:-30px;
     visibility: hidden;
     opacity: 0;
+}
+
+.visible{
+    top:0px;
+    visibility: visible;
+    opacity: 1;
 }
 
 .new-note-form{

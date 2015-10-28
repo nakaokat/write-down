@@ -36,12 +36,6 @@ h1, h2, h3, h4{
     opacity: 0;
 }
 
-.invisible{
-    top:-30px;
-    visibility: hidden;
-    opacity: 0;
-}
-
 .visible{
     top:0px;
     visibility: visible;

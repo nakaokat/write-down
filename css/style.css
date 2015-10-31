@@ -8,15 +8,16 @@ h1, h2, h3, h4{
 }
 
 .header{
-    border-bottom: 1px solid #DDDDDD;
     background-color: #404040;
     color: #f1f1f1;
 }
 
 .header h1{
-    font-size: 22px;
+    font-size: 18px;
     display: inline-block;
     font-weight: 100;
+    margin-top: 12px;
+    margin-left: .5em;
 }
 
 .header img{
@@ -70,7 +71,6 @@ h1, h2, h3, h4{
 
 .new-note-content:focus{
     outline:none;
-    border-top: none;
     border-bottom: solid 1px #DDDDDD;
     border-left:solid 1px #DDDDDD;
     border-right:solid 1px #DDDDDD;

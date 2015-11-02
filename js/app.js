@@ -70,7 +70,7 @@ var ViewModel = function(){
     self.addNote = function(){
         var newNoteObj = {
             content: self.newNote(),
-            date: Date.now()
+            date: new Date()
         };
         self.allNotes.unshift(newNoteObj);
         self.notes.addNote(newNoteObj);

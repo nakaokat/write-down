@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <title>Write Down</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet"  href="css/bootstrap.css">
         <link rel="stylesheet" href="css/style.css">
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
@@ -55,6 +56,7 @@
                                     <pre data-bind="text:$data.content"></pre>
                                 </div>
                                 <div class="text-right">
+                                    <span data-bind="text:$data.date" class="text-sm"></span>
                                     <button data-bind="click:$parent.deleteNote" class="btn btn-default btn-sm">Delete This Note</button>
                                 </div>
                             </div>

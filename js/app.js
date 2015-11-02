@@ -106,6 +106,11 @@ var ViewModel = function(){
             self.messageVisible(false);
         }, 2000);
     };
+
+    self.newNoteCharactorCount = ko.computed(function(){
+        var text = self.newNote().replace(/\n/g, "");
+        return text.length;
+    }, self);
 };
 
 ko.applyBindings(new ViewModel());

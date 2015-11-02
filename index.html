@@ -37,6 +37,7 @@
                             <textarea class="new-note-content" form="new-note" data-bind="value: newNote, event: {change: saveDraft}" placeholder="Please write down something."></textarea>
                         </form>
                         <div class="text-right">
+                            文字数：<span data-bind="text:newNoteCharactorCount"></span>
                             <button data-bind="click: saveDraft" class="btn btn-default">
                                 Save Draft
                             </button>

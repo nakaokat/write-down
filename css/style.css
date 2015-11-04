@@ -68,26 +68,20 @@ h1, h2, h3, h4{
 
 .new-note-content{
     width: 100%;
+    border: none;
     min-height: 400px;
-    border: solid 1px #DDDDDD;
     padding: 2em;
     margin-top: 6px;
-    border-radius: 6px;
 }
 
 .new-note-content:focus{
     outline:none;
-    border-bottom: solid 1px #DDDDDD;
-    border-left:solid 1px #DDDDDD;
-    border-right:solid 1px #DDDDDD;
+    border: none;
 }
 
 .respective-note{
-    padding: 2em 2em 1em 2em;
-    margin-top: 10px;
-    border: 1px solid #DDDDDD;
-    border-radius: 6px;
-    background-color: #ffffff;
+    padding: 30px;
+    border-bottom: 1px dashed #e1e1e1;
 }
 
 .respective-note pre{
@@ -100,4 +94,34 @@ h1, h2, h3, h4{
 
 .footer{
     height: 30px;
+}
+
+.main .container{
+    background-color: #ffffff;
+    border-radius: 6px;
+    border: solid 1px #E1e1e1;
+    margin-top: 12px;
+    padding-bottom: 12px;
+}
+
+.savedNotes .container{
+    border: 1px solid #E1E1E1;
+    border-radius: 6px;
+    margin-top: 12px;
+    background-color: #ffffff;
+}
+
+.respective-note li{
+    line-height: 2.5em;
+    font-size: 12px;
+    color: #555555;
+}
+
+.saveButtonArea{
+    margin-top: 12px;
+    padding-bottom: 12px;
+}
+
+.saveButtonArea .col-md-12{
+    padding-right: 0;
 }

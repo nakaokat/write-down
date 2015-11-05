@@ -111,6 +111,10 @@ h1, h2, h3, h4{
     background-color: #ffffff;
 }
 
+.respective-note ul{
+    padding-left: 0;
+}
+
 .respective-note li{
     line-height: 2.5em;
     font-size: 12px;

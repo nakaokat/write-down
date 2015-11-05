@@ -71,7 +71,7 @@
                                 </div>
                                 <div class="col-md-4 col-sm-4">
                                     <ul>
-                                        <li>作成日：<span  data-bind="text:$data.date"></li>
+                                        <li>作成日：<span  data-bind="text:moment($data.date).format('YYYY/MM/DD hh:mm')"></li>
                                         <li>
                                             <button data-bind="click:$parent.deleteNote" class="btn btn-default btn-sm">Delete This Note</button>
                                         </li>
@@ -95,6 +95,7 @@
         <script src="js/lib/knockout-3.2.0.js"></script>
         <script src="js/lib/knockout.mapping-latest.js"></script>
         <script src="js/lib/jquery-2.1.4.min.js"></script>
+        <script src="js/lib/moment.js"></script>
         <script src="js/app.js"></script>
     </body>
 </html>

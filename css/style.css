@@ -85,7 +85,7 @@ h1, h2, h3, h4{
 }
 
 .respective-note pre{
-    background-color: #ffffff;
+    background-color: inherit;
     padding:0;
     margin:0;
     border: none;

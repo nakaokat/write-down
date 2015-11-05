@@ -111,6 +111,20 @@ var ViewModel = function(){
         var text = self.newNote().replace(/\n/g, "");
         return text.length;
     }, self);
+
+    this.hideNote = function(elem) {
+        if (elem.nodeType === 1) {
+            $(elem).slideUp(function(){
+                $(elem).remove();
+            })
+        }
+    }
+
+    this.showNote = function(elem){
+        if (elem.nodeType === 1){
+                $(elem).hide().slideDown()
+            }
+    }
 };
 
 ko.applyBindings(new ViewModel());

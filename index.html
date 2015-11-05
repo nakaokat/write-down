@@ -63,7 +63,7 @@
         </div>
         <div class="savedNotes">
             <div class="container">
-                <div data-bind="foreach: allNotes">
+                <div data-bind="template:{foreach: allNotes, beforeRemove: hideNote, afterAdd: showNote}">
                     <div class="row">
                         <div class="col-md-12 col-sm-12 respective-note">
                             <div class="row">
@@ -94,6 +94,7 @@
         </div>
         <script src="js/lib/knockout-3.2.0.js"></script>
         <script src="js/lib/knockout.mapping-latest.js"></script>
+        <script src="js/lib/jquery-2.1.4.min.js"></script>
         <script src="js/app.js"></script>
     </body>
 </html>

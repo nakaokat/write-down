@@ -125,3 +125,7 @@ h1, h2, h3, h4{
 .saveButtonArea .col-md-12{
     padding-right: 0;
 }
+
+.notes-bottom{
+    height: 30px;
+}

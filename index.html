@@ -62,6 +62,11 @@
         </div>
         <div class="savedNotes">
             <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 notes-top">
+                        <h2>保存されたノート</h2>
+                    </div>
+                </div>
                 <div data-bind="template:{foreach: allNotes, beforeRemove: hideNote, afterAdd: showNote}">
                     <div class="row">
                         <div class="col-md-12 col-sm-12 respective-note">

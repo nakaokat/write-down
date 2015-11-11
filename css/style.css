@@ -149,3 +149,34 @@ h1, h2, h3, h4{
     padding: 6px 18px;
     font-size: 12px;
 }
+
+.main .row{
+    display: flex;
+}
+
+.mainLeft{
+    width: 100%;
+}
+
+.info {
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+}
+
+.infoShown {
+    opacity: 1;
+    visibility: visible;
+}
+
+.colMd12 {
+    width: 100%;
+}
+
+.colMd9 {
+    width: 75%;
+}
+
+.colMd3 {
+    width: 25%;
+}

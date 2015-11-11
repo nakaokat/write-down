@@ -125,6 +125,17 @@ var ViewModel = function(){
                 $(elem).hide().slideDown()
             }
     }
+
+    this.infoShown = ko.observable(false);
+
+    this.showInfo = function(){
+        self.infoShown(true);
+    };
+    
+    this.hideInfo = function(){
+        self.infoShown(false);
+    };
+
 };
 
 ko.applyBindings(new ViewModel());

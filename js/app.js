@@ -48,7 +48,7 @@ var ViewModel = function(){
         function(){
             var tempNote = self.notes.getTempNote();
             var lastSaveNote = self.notes.getAllNotes()[0];
-            if(!tempNote || !lastSaveNote.content){
+            if(!tempNote || !lastSaveNote){
                 return "";
             }else if(tempNote.content == lastSaveNote.content){
                 return "";

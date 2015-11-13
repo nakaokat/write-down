@@ -53,7 +53,7 @@ var ViewModel = function(){
             }else if(tempNote.content == lastSaveNote.content){
                 return "";
             }else{
-                return tempNote.content
+                return tempNote.content;
             }
         }()
     );
@@ -78,7 +78,7 @@ var ViewModel = function(){
         self.messageText("Saved Sucessfully! Good job!");
         self.messageGreen(true);
         self.messageYellow(false);
-        self.showMessage()
+        self.showMessage();
     };
 
     self.deleteNote = function(){
@@ -116,15 +116,15 @@ var ViewModel = function(){
         if (elem.nodeType === 1) {
             $(elem).slideUp(function(){
                 $(elem).remove();
-            })
+            });
         }
-    }
+    };
 
     this.showNote = function(elem){
         if (elem.nodeType === 1){
-                $(elem).hide().slideDown()
+                $(elem).hide().slideDown();
             }
-    }
+    };
 
     this.infoShown = ko.observable(false);
 

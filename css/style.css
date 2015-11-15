@@ -106,7 +106,18 @@ h1, h2, h3, h4{
 }
 
 .footer{
-    height: 30px;
+    border-top: 1px solid #e1e1e1;
+    min-height: 30px;
+    margin-top: 30px;
+    padding: 1em;
+}
+
+.footer a{
+    color: #333333;
+}
+
+.footer a:visited{
+    color: #333333;
 }
 
 .main .container{

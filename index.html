@@ -6,8 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet"  href="css/bootstrap.css">
         <link rel="stylesheet" href="css/style.css">
-        <link href='https://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,100" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet" type="text/css">
     </head>
     <body>
         <div class="header">
@@ -80,7 +80,7 @@
                                 </div>
                                 <div class="col-md-4 col-sm-4">
                                     <ul>
-                                        <li>作成日：<span  data-bind="text:moment($data.date).format('YYYY/MM/DD hh:mm')"></li>
+                                        <li>作成日：<span  data-bind="text:moment($data.date).format('YYYY/MM/DD hh:mm')"></span></li>
                                         <li>
                                             <button data-bind="click:$parent.deleteNote" class="btn btn-default btn-sm">Delete This Note</button>
                                         </li>

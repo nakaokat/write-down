@@ -76,8 +76,11 @@ var ViewModel = function(){
             content: self.newNote()
         };
         self.notes.setTempNote(tempNoteObj);
-        self.animation(self.iconSaveShown, 0);
     };
+
+    self.showSaveDraftIcon = function(){
+        self.animation(self.iconSaveShown, 0);
+    }
 
     self.addNote = function(){
         var newNoteObj = {
@@ -90,7 +93,7 @@ var ViewModel = function(){
         self.messageText("Saved Sucessfully! Good job!");
         self.messageGreen(true);
         self.messageYellow(false);
-        self.showMessage();
+        self.animation(self.messageVisible, 100);
     };
 
     self.deleteNote = function(){
@@ -99,7 +102,7 @@ var ViewModel = function(){
         self.messageText("Deleted the Note.");
         self.messageGreen(false);
         self.messageYellow(true);
-        self.showMessage();
+        self.animation(self.messageVisible, 100);
     };
 
     self.messageVisible = ko.observable(false);
@@ -108,16 +111,6 @@ var ViewModel = function(){
 
     self.messageGreen = ko.observable(true);
     self.messageYellow = ko.observable(false);
-
-    self.showMessage = function(){
-        window.setTimeout(function(){
-            console.log("show message");
-            self.messageVisible(true);
-        }, 100);
-        window.setTimeout(function(){
-            self.messageVisible(false);
-        }, 2000);
-    };
 
     self.newNoteCharactorCount = ko.computed(function(){
         var text = self.newNote().replace(/\n/g, "");

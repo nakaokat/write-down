@@ -8,6 +8,15 @@ h1, h2, h3, h4{
     font-family: 'Roboto', sans-serif;
 }
 
+.animation{
+    transition: all .4s;
+}
+
+.animationInvisible{
+    visibility: hidden;
+    opacity: 0;
+}
+
 .header{
     background-color: #404040;
     color: #f1f1f1;

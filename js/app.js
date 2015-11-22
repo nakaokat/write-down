@@ -58,13 +58,25 @@ var ViewModel = function(){
         }()
     );
 
+    self.animation = function(obj, timeToShow){
+        window.setTimeout(function(){
+            obj(true);
+        }, timeToShow);
+        window.setTimeout(function(){
+            obj(false);
+        }, 2000);
+    };
+
     self.allNotes = ko.observableArray(this.notes.getAllNotes());
+
+    self.iconSaveShown = ko.observable(false);
 
     self.saveDraft = function(){
         var tempNoteObj = {
             content: self.newNote()
         };
         self.notes.setTempNote(tempNoteObj);
+        self.animation(self.iconSaveShown, 0);
     };
 
     self.addNote = function(){

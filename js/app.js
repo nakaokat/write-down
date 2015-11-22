@@ -58,13 +58,13 @@ var ViewModel = function(){
         }()
     );
 
-    self.animation = function(obj, timeToShow){
+    self.animation = function(obj, delay, duration){
         window.setTimeout(function(){
             obj(true);
-        }, timeToShow);
+        }, delay);
         window.setTimeout(function(){
             obj(false);
-        }, 2000);
+        }, duration);
     };
 
     self.allNotes = ko.observableArray(this.notes.getAllNotes());
@@ -79,7 +79,7 @@ var ViewModel = function(){
     };
 
     self.showSaveDraftIcon = function(){
-        self.animation(self.iconSaveShown, 0);
+        self.animation(self.iconSaveShown, 100, 1000);
     }
 
     self.addNote = function(){
@@ -93,7 +93,7 @@ var ViewModel = function(){
         self.messageText("Saved Sucessfully! Good job!");
         self.messageGreen(true);
         self.messageYellow(false);
-        self.animation(self.messageVisible, 100);
+        self.animation(self.messageVisible, 100, 2000);
     };
 
     self.deleteNote = function(){
@@ -102,7 +102,7 @@ var ViewModel = function(){
         self.messageText("Deleted the Note.");
         self.messageGreen(false);
         self.messageYellow(true);
-        self.animation(self.messageVisible, 100);
+        self.animation(self.messageVisible, 100, 2000);
     };
 
     self.messageVisible = ko.observable(false);

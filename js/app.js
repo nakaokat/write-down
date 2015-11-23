@@ -90,27 +90,33 @@ var ViewModel = function(){
         self.allNotes.unshift(newNoteObj);
         self.notes.addNote(newNoteObj);
         self.newNote('');
-        self.messageText("Saved Sucessfully! Good job!");
-        self.messageGreen(true);
-        self.messageYellow(false);
-        self.animation(self.messageVisible, 100, 2000);
+        self.message.text("Saved Sucessfully! Good job!");
+        self.message.turnGreen()
+        self.animation(self.message.visible, 100, 2000);
     };
 
     self.deleteNote = function(){
         self.allNotes.remove(this);
         self.notes.removeNote(this);
-        self.messageText("Deleted the Note.");
-        self.messageGreen(false);
-        self.messageYellow(true);
-        self.animation(self.messageVisible, 100, 2000);
+        self.message.text("Deleted the Note.");
+        self.message.turnYellow();
+        self.animation(self.message.visible, 100, 2000);
     };
 
-    self.messageVisible = ko.observable(false);
-
-    self.messageText = ko.observable("");
-
-    self.messageGreen = ko.observable(true);
-    self.messageYellow = ko.observable(false);
+    self.message = {
+        visible: ko.observable(false),
+        text: ko.observable(""),
+        colorGreen: ko.observable(true),
+        colorYellow: ko.observable(false),
+        turnGreen: function(){
+            self.message.colorGreen(true);
+            self.message.colorYellow(false);
+        },
+        turnYellow: function(){
+            self.message.colorGreen(false);
+            self.message.colorYellow(true);
+        }
+    }
 
     self.newNoteCharactorCount = ko.computed(function(){
         var text = self.newNote().replace(/\n/g, "");

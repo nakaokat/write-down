@@ -1,2 +1,6 @@
 testing/
 .idea/workspace.xml
+*.pyc
+
+venv/
+
